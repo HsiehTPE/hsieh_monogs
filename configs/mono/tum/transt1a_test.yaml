@@ -1,0 +1,18 @@
+inherit_from: "configs/mono/tum/base_config.yaml"
+
+Dataset:
+  dataset_path: "/home/hsieh/Codes/Dataset/C3VD_dataset/trans_t1_a_monogs"
+  Calibration:
+    fx: 769.24360003
+    fy: 769.25369092
+    cx: 679.54483926
+    cy: 543.97588755
+    k1: 0.0
+    k2: 0.0
+    p1: 0.0
+    p2: 0.0
+    k3: 0.0
+    width: 1350
+    height: 1080
+    depth_scale: 5000.0
+    distorted: False

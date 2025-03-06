@@ -1,0 +1,18 @@
+inherit_from: "configs/mono/tum/base_config.yaml"
+
+Dataset:
+  dataset_path: "datasets/tum/SINUS_P07_RIGHT_EXAMPLE"
+  Calibration:
+    fx: 733.42237646
+    fy: 733.62880952
+    cx: 944.95458138
+    cy: 473.76413155
+    k1: 0.0
+    k2: 0.0
+    p1: 0.0
+    p2: 0.0
+    k3: 0.0
+    width: 1920
+    height: 1080
+    depth_scale: 5000.0
+    distorted: False
