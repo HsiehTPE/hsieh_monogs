@@ -268,6 +268,9 @@ class MonocularDataset(BaseDataset):
             depth_path = self.depth_paths[idx]
             depth = np.array(Image.open(depth_path)) / self.depth_scale
 
+        # 删一些有四通道图片的透明度通道
+        if image.shape[2] == 4:
+            image = image[:, :, :3] # remove alpha channel
         image = (
             torch.from_numpy(image / 255.0)
             .clamp(0.0, 1.0)
