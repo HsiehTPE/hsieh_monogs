@@ -2,6 +2,7 @@ inherit_from: "configs/mono/tum/base_config.yaml"
 
 Dataset:
   dataset_path: "/home/hsieh/Codes/Dataset/endomapper_simulator_dataset/Seq_1_monogs"
+  # dataset_path: "/home/hsieh/Codes/Dataset/endomapper_simulator_dataset/endomapper_seq1_monogs"
   Calibration:
     fx: 472.64955100886374
     fy: 472.64955100886374

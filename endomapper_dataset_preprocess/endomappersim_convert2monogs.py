@@ -12,7 +12,7 @@
 3. 执行后约10秒得到输出
 
 注意事项:
-- 该脚本针对的是EndoMapper Simulated Sequence Dataset, 数据集需要从Synapase网页上下来且未经处理
+- 该脚本针对的是EndoMapper Simulated Sequence Dataset, 数据集需要从Synapse网页上下来且未经处理
 - 该脚本可以在执行时附加上选取帧的片段, 默认71_250
 - 深度图按照作者要求进行了变换, 并分别储存为npy格式和png格式使用, 可以按照具体人物需求使用
 
@@ -125,7 +125,7 @@ def read_exr(file_path):
     # Read the pixel data for each channel
     channel_data = {}
     for channel in channels:
-        channel_data[channel] = np.frombuffer(exr_file.channel(channel), dtype=np.float16).reshape(height, width)
+        channel_data[channel] = np.frombuffer(exr_file.channel(channel), dtype=np.float32).reshape(height, width)
 
     # Combine the channels into a single image
     image = np.stack([channel_data[channel] for channel in channels], axis=-1)
